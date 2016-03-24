@@ -205,6 +205,8 @@ void HtmlTextOsdList::printTextOsd(TextOsd* textOsd)
   htmlHeader.MetaTag("<meta http-equiv=\"refresh\" content=\"1\" />");
   htmlHeader.ToStream(s);
 
+  textOsd->Title = "TEST";
+  
   s->write("\n<div id=\"osd_bg\"><div id=\"osd_container\">");
   s->write("\n<div id=\"header\">");
     if (textOsd->Title().length() > 0)
